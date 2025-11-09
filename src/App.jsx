@@ -1,28 +1,41 @@
-import { useState } from 'react'
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero3D from './components/Hero3D';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import SkillsEducation from './components/SkillsEducation';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Footer() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <footer className="bg-slate-900 py-10 text-slate-300">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-12 lg:px-16">
+        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+          <div>
+            <h3 className="text-lg font-semibold text-white">Let’s build something performant.</h3>
+            <p className="text-sm">312-646-8975 • <a href="mailto:yash1th263@gmail.com" className="underline decoration-emerald-400/60 underline-offset-2">yash1th263@gmail.com</a></p>
+          </div>
+          <div className="flex gap-4 text-sm">
+            <a href="#home" className="hover:text-white">Home</a>
+            <a href="#experience" className="hover:text-white">Experience</a>
+            <a href="#projects" className="hover:text-white">Projects</a>
+            <a href="#skills" className="hover:text-white">Skills</a>
+          </div>
         </div>
+        <p className="mt-6 text-xs text-slate-400">© {new Date().getFullYear()} Yashwanth Reddy Dasari. All rights reserved.</p>
       </div>
-    </div>
-  )
+    </footer>
+  );
 }
 
-export default App
+export default function App() {
+  return (
+    <div className="min-h-screen bg-slate-950 font-sans antialiased">
+      <Navbar />
+      <Hero3D />
+      <Experience />
+      <Projects />
+      <SkillsEducation />
+      <Footer />
+    </div>
+  );
+}
