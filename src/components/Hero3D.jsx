@@ -4,15 +4,16 @@ import { motion } from 'framer-motion';
 
 export default function Hero3D() {
   return (
-    <section id="home" className="relative min-h-[90vh] w-full overflow-hidden bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white">
+    <section id="home" className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white">
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/VJLoxp84lCdVfdZu/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        {/* Updated to the new interactive animation scene */}
+        <Spline scene="https://prod.spline.design/a6HhFsV3-DN9Z-yP/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
       {/* Subtle gradient overlay to improve text contrast without blocking interaction */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/30 to-slate-950/80" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-900/25 to-slate-950/70" />
 
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 pt-28 pb-16 sm:px-8 md:px-12 lg:px-16">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 pt-32 pb-20 sm:px-8 md:px-12 lg:px-16">
         <motion.span
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -20,7 +21,7 @@ export default function Hero3D() {
           className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-slate-200 backdrop-blur-md ring-1 ring-white/15"
         >
           <span className="inline-block h-2 w-2 rounded-full bg-emerald-400" />
-          Open to Software Engineering roles
+          Move your mouse — the hero is interactive
         </motion.span>
 
         <motion.h1
